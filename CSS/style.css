@@ -7,6 +7,12 @@ body{
     min-height: 100vh;
     background-color: #def7d1;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
 }
 
 header {
@@ -99,4 +105,28 @@ nav li:first-child {
     .sidebar {
         width: 100%;
     }
+}
+
+hr, .akhir {
+    border: none;
+    height: 1px;
+    background-color: #558161;
+    border: none;
+    margin: 15px 1 0 0;
+}
+
+.text-center {
+    background-color: #ecfae5c6;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    gap: 5px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: rgb(85, 131, 97);
+    border-top: 1px solid #558161;
+    margin-top: 0;
+    padding: 15px 1 0 0;
+    line-height: 3;
 }
