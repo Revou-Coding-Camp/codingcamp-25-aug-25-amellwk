@@ -1,8 +1,8 @@
 console.log("Hello World");
 
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     greet();
-};
+});
 
 function greet () {
     let user = prompt("Please enter your name:");
@@ -13,11 +13,6 @@ function greet () {
         alert("Hi, Welcome to Energi Hijau!");
     }
 }
-
-document.querySelector('.logo-brand').style.cursor = 'pointer';
-document.querySelector('.logo-brand').addEventListener('click', function() {
-  document.querySelector('#home').scrollIntoView({ behavior: 'smooth' });
-});
 
 document.querySelectorAll('nav ul a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
