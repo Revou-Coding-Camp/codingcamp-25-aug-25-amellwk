@@ -77,6 +77,7 @@ nav li:first-child {
     height: 100vh;
     width: 250px;
     z-index: 999;
+    color: #597E52;
     background-color:  #ecfae55b;
     backdrop-filter: blur(10px);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
@@ -92,6 +93,7 @@ nav li:first-child {
 
 .sidebar a {
     width: 100%;
+    color: #597E52;
 }
 
 .menu-button {
@@ -196,16 +198,17 @@ nav li:first-child {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     max-width: 1200px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    margin: 0 auto;
 }
 
 .details-about {
-    text-align: center;
-    padding: 60px 0 100px;
+    flex: 1 1 50%;
+    text-align: left;
+    padding: 0 20px;
     font-size: xl;
-    max-width: 1200px;
 }
 
 .details-about .judul-about::after {
@@ -219,7 +222,8 @@ nav li:first-child {
 }
 
 .about-section .about .image-about {
-    width: 400px;
+    width: 500px;
+    flex: 1 1 50%;
     object-fit: cover;
     margin-left: 0px;
     border-radius: 30px;
@@ -236,6 +240,8 @@ nav li:first-child {
     font-size: 2rem;
     font-weight: semi-bold;
     color: rgb(85, 131, 97);
+    margin-bottom: 16px;
+    text-align: center;
 }
 
 .about-section .details-about .isi-about {
@@ -288,6 +294,82 @@ nav li:first-child {
     text-align: left;
     padding-left: 5px;
 }
+.plans-section {
+    padding: 50px 20px 100px;
+    background-color: #FFFFEC;
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+.plans-section .judul-plans {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(85, 131, 97);
+    margin: 0 0 20px;
+}
+
+.plans-section .judul-plans::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius);
+    background: #a4bc99;
+}
+
+.plans-section .detail-plans {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    justify-self: space-between;
+    flex-wrap: wrap;
+}
+
+.plans-list {
+    list-style: none;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.plans-items {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px;
+    border: 2px solid #597E52;
+    border-radius: 10px;
+    background-color: white;
+    width: calc(50% - 20px);
+    box-sizing: border-box;
+    gap: 12px;
+    text-align: center;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.187);
+}
+
+.plans-items .icon-wrapper {
+    font-size: 3rem;
+    color: #597E52;
+}
+
+.plans-items span.material-symbols-outlined {
+    font-size: 2.5rem;
+    color: #597E52;
+    flex-shrink: 0;
+}
+
+.plans-items p {
+    margin: 0;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
 
 .contact-section .contact-form {
     width: 100%;
@@ -297,6 +379,7 @@ nav li:first-child {
     padding: 50px 20px 100px;
     background-color: rgb(247, 238, 211);
     box-sizing: border-box;
+    min-height: 100vh;
 }
 
 .contact-section .judul-contact {
@@ -305,6 +388,16 @@ nav li:first-child {
     font-weight: bold;
     color: rgb(85, 131, 97);
     margin: 0 0 20px;
+}
+
+.contact-section .judul-contact::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius);
+    background: #a4bc99;
 }
 
 .contact-section .detail-contact{
@@ -328,8 +421,9 @@ nav li:first-child {
     font-size: medium;
     color: rgb(85, 131, 97);
 }
+
 .contact-section .contact-form .form-input{
-    width: 100%
+    width: 100%;
     height: 50px;
     padding: 0 12px;
     outline: none;
@@ -471,12 +565,37 @@ nav li:first-child {
         display: flex;
         max-width: 90%;
         flex: 1 1 100%;
-        margin: 10px auto;
-        padding: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 10px;
+        padding-right: 10px;
         justify-content: center;
-        gap: 20px;
+        box-sizing: border-box;
     }
 
+    .plans-list {
+       flex-direction: column; 
+       gap: 20px;
+       max-width: 100%;
+    }
+
+    .plans-items {
+       flex-direction: row; /* Icon dan teks sejajar secara horizontal */
+       align-items: center;
+       width: 100%; /* Lebar full container */
+       padding: 12px;
+    }
+
+    .plans-items .icon-wrapper {
+       font-size: 2.5rem; /* ukuran ikon bisa disesuaikan */
+       margin-right: 16px; /* beri jarak kanan agar tidak menempel teks */
+    }
+
+    .plans-items p {
+      text-align: left;
+      margin: 0;
+   }
+    
     .footer-section .details-footer {
         padding: 0 10px;
     }
